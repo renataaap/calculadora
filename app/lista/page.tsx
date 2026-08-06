@@ -17,7 +17,7 @@ export default function Lista() {
     ]
     
     return (
-        <>
+        <div className="lista">
         <h1>Lista</h1>
         <ol type ="I">
             {frutas.map((fruta, index) => ( 
@@ -27,19 +27,14 @@ export default function Lista() {
          </ol>
         <h1>Lista de alunos</h1>
         <ol>
-            <li> 
-                <p>Aluno:{alunos[0].nome} </p>
-                <p>Turma:{alunos[0].turma} </p>
-            </li>
-            <li> 
-                <p>Aluno:{alunos[1].nome} </p>
-                <p>Turma:{alunos[1].turma} </p>
-            </li>
-            <li> 
-                <p>Aluno:{alunos[2].nome} </p>
-                <p>Turma:{alunos[2].turma} </p>
-            </li>
+            {alunos.map((aluno, index) => (
+                <li key={index}>
+                    <p>{aluno.nome}</p>
+                    <p>{aluno.turma}</p>
+                </li>
+            ))
+            } 
         </ol>
-        </>
+        </div>
     );
 }

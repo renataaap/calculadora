@@ -149,7 +149,7 @@ body {
   width: 100%;
 }
 
-/* ===== Página de informações (São Paulo) ===== */
+/* ===== Página de informações ==== */
 .informacoes {
   min-height: 100vh;
   padding: 24px;
@@ -171,11 +171,38 @@ body {
   min-width: 90px;
 }
 
-.botoes-info p {
+.informacoes p {
   max-width: 480px;
   margin: 16px auto;
   padding: 16px;
   background: var(--fundo-card);
   border: 1px solid var(--borda);
   border-radius: 10px;
+}
+
+/* ===== Página de listas ===== */
+.lista {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.lista h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.lista ol {
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 20px 20px 20px 40px;
+  margin-bottom: 24px;
+}
+
+.lista li {
+  margin-bottom: 8px;
+}
+
+.lista li p {
+  margin: 0;
 }
