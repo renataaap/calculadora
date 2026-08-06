@@ -20,14 +20,13 @@ export default function Lista() {
         <>
         <h1>Lista</h1>
         <ol type ="I">
-            <li>{frutas[0]}</li>
-            <li>{frutas[1]}</li>
-            <li>{frutas[2]}</li>
-            <li>{frutas[3]}</li>
-            <li>{frutas[4]}</li>
+            {frutas.map((fruta) => ( 
+                <li>{fruta}</li>
+            ))   
+            }
          </ol>
         <h1>Lista de alunos</h1>
-        <ol type ="I">
+        <ol>
             <li> 
                 <p>Aluno:{alunos[0].nome} </p>
                 <p>Turma:{alunos[0].turma} </p>
