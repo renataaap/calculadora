@@ -20,8 +20,8 @@ export default function Lista() {
         <>
         <h1>Lista</h1>
         <ol type ="I">
-            {frutas.map((fruta) => ( 
-                <li>{fruta}</li>
+            {frutas.map((fruta, index) => ( 
+                <li key={index}>{fruta}</li>
             ))   
             }
          </ol>
