@@ -1,26 +1,181 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #16131f;        /* back in black */
+  --texto: #f0d9e4;     /* mountain heather */
+  --fundo-card: #4a3f4b; /* funkie friday */
+  --borda: #806c79;     /* moonscape */
+  --destaque: #ca87a0;  /* decanting */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--texto);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* ===== Página principal ===== */
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* ===== Card ===== */
+.card {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+}
+
+.card-largo {
+  max-width: 560px;
+}
+
+.card-titulo {
+  margin: 0 0 4px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.card-subtitulo {
+  margin: 0 0 16px;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* ===== Abas ===== */
+.abas {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  padding: 4px;
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+.aba {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--texto);
+}
+
+.aba-ativa {
+  background: var(--destaque);
+  color: var(--bg);
+}
+
+.aba:hover {
+  filter: brightness(1.2);
+}
+
+/* ===== Formulário ===== */
+.campo {
+  margin-bottom: 12px;
+}
+
+.campo label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.campo input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--texto);
+}
+
+.campo input:focus {
+  outline: 2px solid var(--destaque);
+}
+
+.campo input::placeholder {
+  color: var(--texto);
+  opacity: 0.5;
+}
+
+/* ===== Grade de botões de operação ===== */
+.grade-botoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* ===== Botões ===== */
+.botao {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--borda);
+  color: var(--texto);
+}
+
+.botao:hover {
+  filter: brightness(1.2);
+}
+
+.botao-operador {
+  background: var(--destaque);
+  color: var(--bg);
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* ===== Página de informações (São Paulo) ===== */
+.informacoes {
+  min-height: 100vh;
+  padding: 24px;
+  text-align: center;
+}
+
+.informacoes h1 {
+  font-size: 28px;
+}
+
+.botoes-info {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.botoes-info .botao {
+  min-width: 90px;
+}
+
+.botoes-info p {
+  max-width: 480px;
+  margin: 16px auto;
+  padding: 16px;
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
 }
