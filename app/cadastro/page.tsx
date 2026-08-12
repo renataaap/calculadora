@@ -26,11 +26,9 @@ export default function Cadastro() {
         <main className="pagina">
             <div className="card card-largo">
 
-                {/* Cabeçalho */}
                 <h1 className="card-titulo">Formulário de Cadastro</h1>
                 <p className="card-subtitulo">Selecione o tipo de perfil para preencher os dados</p>
 
-                {/* Seleção de Tipo de Pessoa */}
                 <div className="abas">
                     <button
                         type="button"
@@ -48,7 +46,6 @@ export default function Cadastro() {
                     </button>
                 </div>
 
-                {/* Formulário Condicional */}
                 {tipoPessoa === 'PF' ? (
                     <div>
                         <div className="campo">

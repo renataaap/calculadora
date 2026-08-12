@@ -16,11 +16,11 @@ export default function Soma() {
         <main className="pagina">
             <div className="card">
 
-                {/* Cabeçalho */}
+                {}
                 <h1 className="card-titulo">Cálculos</h1>
                 <p className="card-subtitulo">Selecione a modalidade e insira os dados</p>
 
-                {/* Alternador de abas */}
+                {}
                 <div className="abas">
                     <button
                         onClick={() => setTipoCalc('1')}
@@ -36,7 +36,7 @@ export default function Soma() {
                     </button>
                 </div>
 
-                {/* Conteúdo Dinâmico */}
+                {}
                 {tipoCalc === '1' ? (
                     <div>
                         <div className="campo">
@@ -57,7 +57,7 @@ export default function Soma() {
                             />
                         </div>
 
-                        {/* Grade para botões de operações simples */}
+                        {}
                         <div className="grade-botoes">
                             <Botaomais num={num} num2={num2} />
                             <Botaomenos num={num} num2={num2} />
