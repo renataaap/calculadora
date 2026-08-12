@@ -2,7 +2,7 @@
 import { useState } from "react";
 import AlunoCard from "../components/AlunosCard";
 
-const turmaSelec: Record <string, string> = {
+const turmaSelec: Record<string, string> = {
     "1": "idev3",
     "2": "idev4",
     "3": "idev5"
@@ -44,27 +44,27 @@ export default function Lista() {
 
     return (
         <>
-           <div className="lista">
-            <h1>Alunos</h1>
+            <div className="lista">
+                <h1>Alunos</h1>
 
-            <button onClick={() => setAlunoSelec("1")}>
-                Idev3
-            </button>
-            <button onClick={() => setAlunoSelec("2")}>
-                Idev4
-            </button>
-            <button onClick={() => setAlunoSelec("3")}>
-                Idev5
-            </button>
+                <button onClick={() => setAlunoSelec("1")}>
+                    Idev3
+                </button>
+                <button onClick={() => setAlunoSelec("2")}>
+                    Idev4
+                </button>
+                <button onClick={() => setAlunoSelec("3")}>
+                    Idev5
+                </button>
 
-            <h1>Lista de alunos</h1>
+                <h1>Lista de alunos</h1>
 
-            <div className="card-container">
-                {listaFiltrada.map((aluno, index) => (
-                    <AlunoCard key={index} aluno={aluno} />
-                ))}
+                <div className="card-container">
+                    {listaFiltrada.map((aluno, index) => (
+                        <AlunoCard key={index} aluno={aluno} />
+                    ))}
+                </div>
             </div>
-        </div>
         </>
     );
 }
