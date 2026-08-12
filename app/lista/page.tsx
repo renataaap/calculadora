@@ -1,15 +1,8 @@
 'use client'
 import { useState } from "react";
-import AlunoCard from "../components/AlunosCard";
-
-const turmaSelec: Record<string, string> = {
-    "1": "idev3",
-    "2": "idev4",
-    "3": "idev5"
-};
 
 export default function Lista() {
-    const alunos = [
+    var alunos = [
         {
             nome: "guilherme",
             turma: "idev4"
