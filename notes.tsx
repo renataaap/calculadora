@@ -10,5 +10,4 @@ produtos = [{empresa="jacto", produto="lixadeira", preço="150"}
             {empresa="jacto", produto="parafusadeira", preço="110"}]
 
 locais = [{local="academia", descrição="top", utilizacao="treino"}
-          {local="ginasio", descrição="completo", utilização="volei"}
-]
+          {local="ginasio", descrição="completo", utilização="volei"}]
